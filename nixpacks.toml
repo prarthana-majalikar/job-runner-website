@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "gcc"]
+
+[phases.build]
+cmds = [
+  "npm install",
+  "gcc -o scripts/checksum scripts/checksum.c"
+]
+
+[start]
+cmd = "npm start"
